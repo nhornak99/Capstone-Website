@@ -2,7 +2,7 @@
  * Start Bootstrap - Freelancer v3.3.7+1 (http://startbootstrap.com/template-overviews/freelancer)
  * Copyright 2013-2016 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
- */body{font-family:Lato,'Helvetica Neue',Helvetica,Arial,sans-serif;overflow-x:hidden; overflow-y: auto; padding: 0; margin: 0; height: 100%;}
+ */body{font-family:Lato,'Helvetica Neue',Helvetica,Arial,sans-serif;overflow-x:hidden; overflow-y: auto; padding: 0; margin: 0; /*height: 100%; min-height: 100%;*/ background-color: black;}
    p{font-size:20px}
    p.small{font-size:16px}
    a,a.active,a:active,a:focus,a:hover{color:blue;outline:0}
@@ -68,7 +68,7 @@
    .floating-label-form-group-with-value label{top:0;opacity:1}
    .floating-label-form-group-with-focus label{color:#18BC9C}
    form .row:first-child .floating-label-form-group{border-top:1px solid #eee}
-   footer{color:#fff; background-image:url(../Images/blackBack.jpg); margin-top: 2em; position: absolute; bottom: 0; width: 100%; height: 17em; overflow:hidden;}
+   footer{color:#fff; background-image:url(../Images/blackBack.jpg); margin-top: -10em; /*position: absolute; bottom: 0;*/ width: 100%; height: 15em; overflow:hidden;}
    footer h3{margin-bottom:30px}
    footer .footer-above{padding-top:30px; /*background-image: url(../Images/blackBack.jpg)*/}
    footer .footer-col{margin-bottom:30px}
@@ -109,3 +109,17 @@
 #body {
     padding-bottom: 17em;
 }
+
+#wrapper-nav{
+    width: 100%;
+    height: 6.3em;
+
+}
+
+#content {
+    height: 35em;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 1em;
+}
+

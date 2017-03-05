@@ -63,12 +63,22 @@
 
                 <nav class="navbar navbar-custom" id="afterHeader">
                     <div class="container-fluid">
+                        <%--<asp:ScriptManager ID="ScriptManager1" runat="server">
+                        </asp:ScriptManager>--%>
                         <div class="row">
                             <div class="col-md-3">
                                 <img src="Images/busIcon.png" alt="Bus Icon" />
                             </div>
                             <div class="col-md-3">
                                 <asp:Button ID="loginButton" runat="server" CssClass="btn btn-success" Text="Login" OnClick="loginButton_Click" />
+                                <%--<!-- ModalPopupExtender -->
+                                <cc1:ModalPopupExtender ID="mp1" runat="server" PopupControlID="Panel1" TargetControlID="loginButton"
+                                    CancelControlID="btnClose" BackgroundCssClass="modalBackground">
+                                </cc1:ModalPopupExtender>
+                                <asp:Panel ID="Panel1" runat="server" CssClass="modalPopup" align="center" Style="display: none">
+                                    This is an ASP.Net AJAX ModalPopupExtender Example<br />
+                                    <asp:Button ID="btnClose" runat="server" Text="Close" />
+                                </asp:Panel>--%>
 
                             </div>
                             <div class="col-md-3">
