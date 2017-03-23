@@ -11,7 +11,7 @@ using System.Configuration;
 
 public partial class Admin : System.Web.UI.Page
 {
-    string cs = "Data Source=noah_pc\\sqlexpress;Initial Catalog=SmartBusing;Integrated Security=True";
+    string cs = /*"Data Source=noah_pc\\sqlexpress;Initial Catalog=SmartBusing;Integrated Security=True"*/"Data Source=215-6565;Initial Catalog=SmartBusing;User ID=sa;Password=password";
     StringBuilder tableBuilder = new StringBuilder();
 
     protected void Page_Load(object sender, EventArgs e)

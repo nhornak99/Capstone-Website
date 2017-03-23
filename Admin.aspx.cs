@@ -8,10 +8,11 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Text;
 using System.Configuration;
+using System.Web.Configuration;
 
 public partial class Admin : System.Web.UI.Page
 {
-    private SqlConnection con = new SqlConnection(WebConfigurationManager.ConnectionStrings["Mycon"].ConnectionString);
+    public SqlConnection con = new SqlConnection(WebConfigurationManager.ConnectionStrings["Mycon"].ConnectionString);
     StringBuilder tableBuilder = new StringBuilder();
 
     protected void Page_Load(object sender, EventArgs e)
@@ -97,16 +98,18 @@ public partial class Admin : System.Web.UI.Page
         else if (districtList.Text == "Highland")
             district = 4;
 
-        using (con)
+        using (SqlConnection conn = new SqlConnection(@"Data Source=215-6565;Initial Catalog=SmartBusing;User ID=sa;Password=password24$"))
         {
             using (SqlCommand cmd = new SqlCommand("SELECT User_ID, FirstName, UserName, Password FROM UserTbl WHERE District_ID = " + district))
             {
                 using (SqlDataAdapter sda = new SqlDataAdapter())
                 {
-                    cmd.Connection = con;
+
+                    cmd.Connection = conn;
                     sda.SelectCommand = cmd;
                     using (DataTable dt = new DataTable())
                     {
+                        //con.Open();
                         sda.Fill(dt);
                         GridView1.DataSource = dt;
                         GridView1.DataBind();
@@ -119,7 +122,7 @@ public partial class Admin : System.Web.UI.Page
     private DataTable GetData(SqlCommand cmd)
     {
         DataTable dt = new DataTable();
-        SqlConnection con = new SqlConnection(cs);
+       
         SqlDataAdapter sda = new SqlDataAdapter();
         cmd.CommandType = CommandType.Text;
         cmd.Connection = con;
